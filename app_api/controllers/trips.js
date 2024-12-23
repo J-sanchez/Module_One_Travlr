@@ -18,22 +18,22 @@ const tripsList = async (req, res) => {
             .json(q);
     }
 };
-// const tripsFindByCode = async (req, res) => {
-//     const q = await Model
-//         .find({}) 
-//         .exec()
-//             if (!q) {
-//                 return res
-//                     .status(404)
-//                     .json(err);
+const tripsFindByCode = async (req, res) => {
+    const q = await Model
+        .find({}) 
+        .exec()
+            if (!q) {
+                return res
+                    .status(404)
+                    .json(err);
         
-//             } else {
-//                 return res
-//                     .status(200)
-//                     .json(q);
-//             }
-//         }
+            } else {
+                return res
+                    .status(200)
+                    .json(q);
+            }
+        }
 
 module.exports = {
-            tripsList
+            tripsList, tripsFindByCode
         }
